@@ -7,18 +7,22 @@ public class Passage : MonoBehaviour
 {
     public GameManager manager;
     public List<Line> nonInteractiveLines = new List<Line>();
-    int nextDisplayed;
+    public List<Line> exitLines = new List<Line>();
+    public List<Line> beforeChoiceLines = new List<Line>();
+    int nextDisplayed, nextDisplayedExit;
     public RectTransform masterPanel;
     public GameObject textPrefab, bottonPrefab;
     public Line line_to_P1, line_to_P2;
     public Passage option_1, option_2;
     private GameObject button1, button2;
-    private bool options_instantiated;
+    private bool options_instantiated, exiting;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         options_instantiated = false;
         nextDisplayed = 0;
+        nextDisplayedExit = 0;
+        exiting = false;
     }
 
     public void GotoOpt1()
@@ -59,6 +63,23 @@ public class Passage : MonoBehaviour
         nextDisplayed++;
     }
 
+    public void ShowNextNoninteractiveExitLine()
+    {
+        GameObject objeto = Instantiate(textPrefab, masterPanel);
+        Text texto = objeto.GetComponent<Text>();
+        // later on animation migth be here or in the prefab itself
+        texto.text = exitLines[nextDisplayed].textLine;
+        // TODO define proper colors
+        texto.color = exitLines[nextDisplayed].character == Line.Character.Deneb ? Color.red : Color.cyan;
+        objeto.GetComponent<RectTransform>().SetAsLastSibling();
+        nextDisplayedExit++;
+
+        if (nextDisplayedExit >= exitLines.Count)
+        {
+            exiting = true;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -68,7 +89,12 @@ public class Passage : MonoBehaviour
             {
                 ShowNextNoninteractiveLine();
             }
-            else if (!options_instantiated) {
+            else if (exitLines.Count > 0 && manager.branch_visited && nextDisplayedExit < exitLines.Count)
+            {
+                ShowNextNoninteractiveExitLine();
+            }
+            else if (!options_instantiated && !exiting) 
+            {
                 options_instantiated = true;
                 button1 = Instantiate(bottonPrefab, masterPanel);
                 Text texto_P1 = button1.GetComponent<Text>();

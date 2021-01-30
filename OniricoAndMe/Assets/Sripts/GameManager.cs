@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public Passage active_passage;
     public Button boton1, boton2;
     public Color option_color;
+    public bool branch_visited;
 
     public void SelectBranch(int option)
     {
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        branch_visited = false;
     }
 
     // Update is called once per frame

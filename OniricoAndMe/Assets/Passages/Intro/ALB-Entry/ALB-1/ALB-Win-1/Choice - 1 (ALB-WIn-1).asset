@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
-  m_Name: Data
+  m_Name: Choice - 1 (ALB-WIn-1)
   m_EditorClassIdentifier: 
-  textLine: Ah, you know who I am, we have met before ^_^, you used to call me Sirio.
-    I see you don't remember it just yet, but you'll find out. Just don't worry about
-    it now. Actually, I'm more interested in why you are here.
-  character: 0
+  textLine: Aha, I feel like you're right, though this whole thing seems like a hard
+    thing to address. Anyway, I can't keep living my life like this, pretending to
+    be someone I'm not and behaving just like others wants me to.
+  character: 1
