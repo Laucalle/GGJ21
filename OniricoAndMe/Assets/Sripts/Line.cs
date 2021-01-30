@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Line : MonoBehaviour
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Line", order = 1)]
+public class Line : ScriptableObject
 {
-    public enum Character{ Sirio, Deneb};
+    public enum Character{Sirio, Deneb};
     public string textLine;
     public Character character;
 }

@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 4715013629857209462}
   - component: {fileID: 4596088325349932364}
   - component: {fileID: 3289009234139607446}
+  - component: {fileID: 609399475870125758}
   m_Layer: 5
-  m_Name: non-option text
+  m_Name: option text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,3 +94,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!114 &609399475870125758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542586207305986057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c8186ebf4749e4598d8167ee71c4d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalColor: {r: 0.7264151, g: 0, b: 0, a: 1}
+  HoverColor: {r: 0.8113208, g: 0.32709092, b: 0, a: 1}
+  PressColor: {r: 0.09900633, g: 0.6226415, b: 0, a: 1}
+  DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
