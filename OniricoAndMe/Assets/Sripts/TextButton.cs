@@ -21,7 +21,7 @@ public class TextButton : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     #endregion Inspector
 
     private bool _isInteractive = true;
-    /*public bool interactive
+    public bool interactive
     {
         get
         {
@@ -32,7 +32,7 @@ public class TextButton : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
             _isInteractive = value;
             UpdateColor();
         }
-    }*/
+    }
 
     private bool _isPressed;
     private bool _isHover;
@@ -47,13 +47,13 @@ public class TextButton : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
         }
     }
 
-    private void Updatecolor()
+    private void UpdateColor()
     {
-        /*if (!interactive)
+        if (!interactive)
         {
             TextComponent.color = DisabledColor;
             return;
-        }*/
+        }
 
         if (_isPressed)
         {
@@ -85,27 +85,27 @@ public class TextButton : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     {
         if (!_isHover) return;
         _isPressed = true;
-        Updatecolor();
+        UpdateColor();
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         if (!_isHover) return;
         _isPressed = false;
-        Updatecolor();
+        UpdateColor();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         _isHover = true;
-        Updatecolor();
+        UpdateColor();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         _isHover = false;
         _isPressed = false;
-        Updatecolor();
+        UpdateColor();
     }
 
     #endregion IPointer Callbacks

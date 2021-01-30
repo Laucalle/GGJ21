@@ -26,6 +26,9 @@ public class Passage : MonoBehaviour
         option_1.gameObject.SetActive(true);
 
         button2.SetActive(false);
+        button1.GetComponent<TextButton>().interactive = false;
+        LayoutRebuilder.ForceRebuildLayoutImmediate(masterPanel);
+        option_1.ShowNextNoninteractiveLine();
         LayoutRebuilder.ForceRebuildLayoutImmediate(masterPanel);
 
         this.gameObject.SetActive(false);
@@ -36,9 +39,24 @@ public class Passage : MonoBehaviour
         option_2.gameObject.SetActive(true);
 
         button1.SetActive(false);
+        button2.GetComponent<TextButton>().interactive = false;
+        LayoutRebuilder.ForceRebuildLayoutImmediate(masterPanel);
+        option_2.ShowNextNoninteractiveLine();
         LayoutRebuilder.ForceRebuildLayoutImmediate(masterPanel);
 
         this.gameObject.SetActive(false);
+    }
+
+    public void ShowNextNoninteractiveLine()
+    {
+        GameObject objeto = Instantiate(textPrefab, masterPanel);
+        Text texto = objeto.GetComponent<Text>();
+        // later on animation migth be here or in the prefab itself
+        texto.text = nonInteractiveLines[nextDisplayed].textLine;
+        // TODO define proper colors
+        texto.color = nonInteractiveLines[nextDisplayed].character == Line.Character.Deneb ? Color.red : Color.cyan;
+        objeto.GetComponent<RectTransform>().SetAsLastSibling();
+        nextDisplayed++;
     }
 
     // Update is called once per frame
@@ -48,14 +66,7 @@ public class Passage : MonoBehaviour
             // instanciamos la siguiente linea de dialogo si la hay, si no la opcion.
             if (nextDisplayed < nonInteractiveLines.Count)
             {
-                GameObject objeto = Instantiate(textPrefab, masterPanel);
-                Text texto = objeto.GetComponent<Text>();
-                // later on animation migth be here or in the prefab itself
-                texto.text = nonInteractiveLines[nextDisplayed].textLine;
-                // TODO define proper colors
-                texto.color = nonInteractiveLines[nextDisplayed].character == Line.Character.Deneb ? Color.red : Color.cyan;
-                objeto.GetComponent<RectTransform>().SetAsLastSibling();
-                nextDisplayed++;
+                ShowNextNoninteractiveLine();
             }
             else if (!options_instantiated) {
                 options_instantiated = true;
