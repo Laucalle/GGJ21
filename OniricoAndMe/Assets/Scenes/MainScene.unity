@@ -961,6 +961,17 @@ MonoBehaviour:
           m_StringArgument: exit
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 420196989}
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &420196989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7751,7 +7762,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: b03d72937048a2349947a27c7e4668a6, type: 2}
   option_1: {fileID: 1458796483}
   option_2: {fileID: 1458796483}
-  is_win: 0
+  is_win: 1
 --- !u!4 &878459622
 Transform:
   m_ObjectHideFlags: 0
@@ -7894,7 +7905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bea1a074ce95bd24bbe542d35834868c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxChildren: 5
+  maxChildren: 4
 --- !u!1 &881521785
 GameObject:
   m_ObjectHideFlags: 0
@@ -8866,8 +8877,8 @@ MonoBehaviour:
   final_panel: {fileID: 1671612969}
   intro_panel: {fileID: 1550751714}
   max_time: 5
-  max_pitch: 1
-  min_pitch: 0
+  max_pitch: 1.1
+  min_pitch: 0.9
   masterPanel: {fileID: 0}
   sirio_anim: {fileID: 2072447924}
   deneb_anim: {fileID: 1708025149}
@@ -14727,8 +14738,19 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1890112820}
-        m_MethodName: set_enabled
+        m_MethodName: set_interactive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1890112821}
+        m_MethodName: set_text
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15168,6 +15190,7 @@ MonoBehaviour:
   exitLines:
   - {fileID: 11400000, guid: 4d5fb36624e38354a90ce4898ee35719, type: 2}
   - {fileID: 11400000, guid: bb20588c883c49148947487aa7c9feaa, type: 2}
+  - {fileID: 11400000, guid: 91f9a97913e53be42b4142c2d00efbbf, type: 2}
   beforeChoiceLines: []
   masterPanel: {fileID: 880012020}
   textPrefab: {fileID: 3542586207305986057, guid: 41df560e9df7f9f4096e5abe604124a9,
@@ -15178,7 +15201,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 454ca61770d801044bca1b451f9f594d, type: 2}
   option_1: {fileID: 771615673}
   option_2: {fileID: 771615673}
-  is_win: 0
+  is_win: 1
 --- !u!4 &2083076538
 Transform:
   m_ObjectHideFlags: 0
@@ -15230,6 +15253,7 @@ MonoBehaviour:
   exitLines:
   - {fileID: 11400000, guid: 0cdd9fa217695e34b957e5b6e525cbbb, type: 2}
   - {fileID: 11400000, guid: 2fc4fa768df24044699c2ebe980912a7, type: 2}
+  - {fileID: 11400000, guid: 771b62735f2eef743afb12ed4dd1d93c, type: 2}
   beforeChoiceLines: []
   masterPanel: {fileID: 880012020}
   textPrefab: {fileID: 3542586207305986057, guid: 41df560e9df7f9f4096e5abe604124a9,
@@ -15240,7 +15264,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 766af33e46a6924489edd722eee9d98b, type: 2}
   option_1: {fileID: 771615673}
   option_2: {fileID: 771615673}
-  is_win: 0
+  is_win: 1
 --- !u!4 &2114981666
 Transform:
   m_ObjectHideFlags: 0
