@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public Button boton1, boton2;
     public Color option_color;
     public bool branch_visited;
+    public int points;
 
     public void SelectBranch(int option)
     {
@@ -49,6 +50,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         branch_visited = false;
+        points = 0;
     }
 
     // Update is called once per frame

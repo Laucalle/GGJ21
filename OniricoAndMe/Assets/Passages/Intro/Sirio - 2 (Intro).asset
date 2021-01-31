@@ -15,3 +15,6 @@ MonoBehaviour:
   textLine: Uh, I see. There is no reason for you to leave, you are safe here. Look!
     I made this campfire for both of us so we can have a talk if you want ^_^.
   character: 2
+  sirio_anim: 3
+  sirio_sound: 1
+  deneb_anim: 0

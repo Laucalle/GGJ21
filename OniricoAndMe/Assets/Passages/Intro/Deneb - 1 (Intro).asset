@@ -15,3 +15,6 @@ MonoBehaviour:
   textLine: "Umm hi, emm... I think I'm lost again... I don\xB4t really know how
     I got here, where can I find the exit?"
   character: 1
+  sirio_anim: 0
+  sirio_sound: 0
+  deneb_anim: 1

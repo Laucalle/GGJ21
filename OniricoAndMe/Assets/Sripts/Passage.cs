@@ -14,6 +14,7 @@ public class Passage : MonoBehaviour
     public GameObject textPrefab, bottonPrefab;
     public Line line_to_P1, line_to_P2;
     public Passage option_1, option_2;
+    public bool is_win = false;
     private GameObject button1, button2;
     private bool options_instantiated, exiting;
     // Start is called before the first frame update
@@ -24,6 +25,10 @@ public class Passage : MonoBehaviour
         nextDisplayedExit = 0;
         nextDisplayedChoiceLines = 0;
         exiting = false;
+        if (is_win)
+        {
+            manager.points++;
+        }
     }
 
     public void GotoOpt1()
