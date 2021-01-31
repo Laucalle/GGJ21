@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public Color option_color;
     public bool branch_visited, player_in_control;
     public int points;
+    public GameObject final_panel;
 
     public void SelectBranch(int option)
     {
@@ -139,6 +140,48 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        bool animation_called = false, final_line_printed = false;
+        if (!player_in_control)
+        {
+            float max_time = 0, start_time = 0;
+
+            if (start_time == 0 && !animation_called)
+            {
+                Line aux_line = new Line();
+                aux_line.character = Line.Character.Deneb;
+                aux_line.deneb_anim = Line.DenebAnims.InOut;
+                CallAnimation(aux_line);
+                animation_called = true;
+                start_time = Time.deltaTime;
+
+            } else if (Time.deltaTime - start_time >= max_time && animation_called)
+            {
+                if (!final_line_printed)
+                {
+                    active_passage.ShowNextNoninteractiveExitLine();
+
+                } else if (Input.anyKeyDown)
+                {
+                    final_panel.SetActive(true);
+
+                    switch (points)
+                    {
+                        case 1:
+                            final_panel.GetComponent<Text>().text = "Ending 1";
+                            break;
+                        case 2:
+                            final_panel.GetComponent<Text>().text = "Ending 2";
+                            break;
+                        default:
+                            final_panel.GetComponent<Text>().text = "Ending 3";
+                            break;
+
+                    }
+                    
+                }
+            }
+
+        }
     }
 }
