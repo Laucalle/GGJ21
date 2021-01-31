@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public Passage active_passage;
     public Button boton1, boton2;
     public Color option_color;
-    public bool branch_visited;
+    public bool branch_visited, player_in_control;
     public int points;
 
     public void SelectBranch(int option)
@@ -46,10 +46,93 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void CallAnimation(Line line)
+    {
+        if (line.character == Line.Character.Sirio || line.character == Line.Character.StrangeCreature)
+        {
+
+            switch (line.sirio_anim)
+            {
+                case Line.SirioAnims.Smile:
+
+                    break;
+
+                case Line.SirioAnims.Hand:
+
+                    break;
+
+                case Line.SirioAnims.SmileHand:
+
+                    break;
+
+                case Line.SirioAnims.Nod:
+
+                    break;
+
+                default:
+                    break;
+            }
+
+        }
+        else if (line.character == Line.Character.Deneb)
+        {
+            switch (line.deneb_anim)
+            {
+                case Line.DenebAnims.InOut:
+
+                    break;
+
+                case Line.DenebAnims.Happy:
+
+                    break;
+
+                case Line.DenebAnims.Sad:
+
+                    break;
+
+                case Line.DenebAnims.Surprised:
+
+                    break;
+
+                default:
+                    break;
+
+
+            }
+        }
+    }
+
+    public void CallSound(Line line)
+    {
+        switch (line.sirio_sound)
+        {
+            case Line.SirioSounds.Ah:
+
+                break;
+
+            case Line.SirioSounds.Oh:
+
+                break;
+
+            case Line.SirioSounds.Umm:
+
+                break;
+
+            case Line.SirioSounds.Hehe:
+
+                break;
+
+            default:
+                break;
+
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         branch_visited = false;
+        player_in_control = true;
         points = 0;
     }
 
