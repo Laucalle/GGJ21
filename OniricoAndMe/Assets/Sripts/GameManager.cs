@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class GameManager : MonoBehaviour
     public Color option_color;
     public bool branch_visited, player_in_control;
     public int points;
-    public GameObject final_panel;
+    public GameObject final_panel, intro_panel;
+    private float timer = 0;
+    public float max_time = 0;
+    private bool final_line_printed = false;
 
     public void SelectBranch(int option)
     {
@@ -137,29 +141,50 @@ public class GameManager : MonoBehaviour
         points = 0;
     }
 
+    public void RestartButton()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
+
+    private IEnumerator WaitAndInEnable(float waitTime)
+    {
+
+        yield return new WaitForSeconds(waitTime);
+        intro_panel.SetActive(false);
+
+    }
+
+    public void CallWaitAndEnable(float waitTime)
+    {
+        StartCoroutine(WaitAndInEnable(waitTime));
+    }
+
     // Update is called once per frame
     void Update()
     {
 
-        bool animation_called = false, final_line_printed = false;
         if (!player_in_control)
         {
-            float max_time = 0, start_time = 0;
 
-            if (start_time == 0 && !animation_called)
+            if (timer == 0)
             {
                 Line aux_line = new Line();
                 aux_line.character = Line.Character.Deneb;
                 aux_line.deneb_anim = Line.DenebAnims.InOut;
                 CallAnimation(aux_line);
-                animation_called = true;
-                start_time = Time.deltaTime;
+                timer += Time.deltaTime;
 
-            } else if (Time.deltaTime - start_time >= max_time && animation_called)
+            } else
+            {
+                timer += Time.deltaTime;
+            }
+            
+            if (timer >= max_time)
             {
                 if (!final_line_printed)
                 {
                     active_passage.ShowNextNoninteractiveExitLine();
+                    final_line_printed = true;
 
                 } else if (Input.anyKeyDown)
                 {
@@ -168,13 +193,13 @@ public class GameManager : MonoBehaviour
                     switch (points)
                     {
                         case 1:
-                            final_panel.GetComponent<Text>().text = "Ending 1";
+                            final_panel.transform.GetChild(0).GetComponent<Text>().text = "Ending 1";
                             break;
                         case 2:
-                            final_panel.GetComponent<Text>().text = "Ending 2";
+                            final_panel.transform.GetChild(0).GetComponent<Text>().text = "Ending 2";
                             break;
                         default:
-                            final_panel.GetComponent<Text>().text = "Ending 3";
+                            final_panel.transform.GetChild(0).GetComponent<Text>().text = "Ending 3";
                             break;
 
                     }
