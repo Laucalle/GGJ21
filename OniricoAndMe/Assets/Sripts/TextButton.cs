@@ -15,6 +15,13 @@ public class TextButton : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     public Color PressColor = Color.black;
     public Color DisabledColor = Color.gray;
 
+    public AudioSource selectSource;
+
+    public void Start()
+    {
+        selectSource = GetComponent<AudioSource>();
+    }
+
     // add callbacks in the inspector like for buttons
     public UnityEvent onClick;
 
