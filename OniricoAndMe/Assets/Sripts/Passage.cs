@@ -196,7 +196,8 @@ public class Passage : MonoBehaviour
                 }
 
             }
-            LayoutRebuilder.ForceRebuildLayoutImmediate(masterPanel);
+            
         }
+        LayoutRebuilder.ForceRebuildLayoutImmediate(masterPanel);
     }
 }

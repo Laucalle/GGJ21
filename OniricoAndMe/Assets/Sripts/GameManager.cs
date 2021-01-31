@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public List<AudioClip> sirio_sounds, deneb_sounds;
     public AudioSource mainAudio;
 
+    public EyeManger eyes;
+
     public void SelectBranch(int option)
     {
 
@@ -101,8 +103,11 @@ public class GameManager : MonoBehaviour
 
                 case Line.DenebAnims.Surprised:
                     deneb_anim.SetTrigger("Surprised");
+                    eyes.WakeUp();
                     break;
-
+                case Line.DenebAnims.DemonsGO:
+                    eyes.MakeHalfGo();
+                    break;
                 default:
                     break;
 
