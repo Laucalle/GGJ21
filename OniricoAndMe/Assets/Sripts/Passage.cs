@@ -9,7 +9,7 @@ public class Passage : MonoBehaviour
     public List<Line> nonInteractiveLines = new List<Line>();
     public List<Line> exitLines = new List<Line>();
     public List<Line> beforeChoiceLines = new List<Line>();
-    int nextDisplayed, nextDisplayedExit;
+    int nextDisplayed, nextDisplayedExit, nextDisplayedChoiceLines;
     public RectTransform masterPanel;
     public GameObject textPrefab, bottonPrefab;
     public Line line_to_P1, line_to_P2;
@@ -22,6 +22,7 @@ public class Passage : MonoBehaviour
         options_instantiated = false;
         nextDisplayed = 0;
         nextDisplayedExit = 0;
+        nextDisplayedChoiceLines = 0;
         exiting = false;
     }
 
@@ -68,9 +69,9 @@ public class Passage : MonoBehaviour
         GameObject objeto = Instantiate(textPrefab, masterPanel);
         Text texto = objeto.GetComponent<Text>();
         // later on animation migth be here or in the prefab itself
-        texto.text = exitLines[nextDisplayed].textLine;
+        texto.text = exitLines[nextDisplayedExit].textLine;
         // TODO define proper colors
-        texto.color = exitLines[nextDisplayed].character == Line.Character.Deneb ? Color.red : Color.cyan;
+        texto.color = exitLines[nextDisplayedExit].character == Line.Character.Deneb ? Color.red : Color.cyan;
         objeto.GetComponent<RectTransform>().SetAsLastSibling();
         nextDisplayedExit++;
 
@@ -78,6 +79,18 @@ public class Passage : MonoBehaviour
         {
             exiting = true;
         }
+    }
+
+    public void ShowNextNoninteractiveChoiceLines()
+    {
+        GameObject objeto = Instantiate(textPrefab, masterPanel);
+        Text texto = objeto.GetComponent<Text>();
+        // later on animation migth be here or in the prefab itself
+        texto.text = beforeChoiceLines[nextDisplayedChoiceLines].textLine;
+        // TODO define proper colors
+        texto.color = beforeChoiceLines[nextDisplayedChoiceLines].character == Line.Character.Deneb ? Color.red : Color.cyan;
+        objeto.GetComponent<RectTransform>().SetAsLastSibling();
+        nextDisplayedChoiceLines++;
     }
 
     // Update is called once per frame
@@ -95,20 +108,34 @@ public class Passage : MonoBehaviour
             }
             else if (!options_instantiated && !exiting) 
             {
-                options_instantiated = true;
-                button1 = Instantiate(bottonPrefab, masterPanel);
-                Text texto_P1 = button1.GetComponent<Text>();
-                texto_P1.text = line_to_P1.textLine;
-                texto_P1.color = Color.red;
-                button1.GetComponent<RectTransform>().SetAsLastSibling();
-                button1.GetComponent<TextButton>().onClick.AddListener(GotoOpt1);
 
-                button2 = Instantiate(bottonPrefab, masterPanel);
-                Text texto_P2 = button2.GetComponent<Text>();
-                texto_P2.text = line_to_P2.textLine;
-                texto_P2.color = Color.red;
-                button2.GetComponent<RectTransform>().SetAsLastSibling();
-                button2.GetComponent<TextButton>().onClick.AddListener(GotoOpt2);
+                if (beforeChoiceLines.Count > 0 && nextDisplayedChoiceLines < beforeChoiceLines.Count)
+                {
+                    ShowNextNoninteractiveChoiceLines();
+                }
+                else
+                {
+                    options_instantiated = true;
+                    button1 = Instantiate(bottonPrefab, masterPanel);
+                    Text texto_P1 = button1.GetComponent<Text>();
+                    texto_P1.text = line_to_P1.textLine;
+                    texto_P1.color = Color.red;
+                    button1.GetComponent<RectTransform>().SetAsLastSibling();
+                    button1.GetComponent<TextButton>().onClick.AddListener(GotoOpt1);
+
+                    button2 = Instantiate(bottonPrefab, masterPanel);
+                    Text texto_P2 = button2.GetComponent<Text>();
+                    texto_P2.text = line_to_P2.textLine;
+                    texto_P2.color = Color.red;
+                    button2.GetComponent<RectTransform>().SetAsLastSibling();
+                    button2.GetComponent<TextButton>().onClick.AddListener(GotoOpt2);
+
+                    if (exitLines.Count > 0)
+                    {
+                        manager.branch_visited = true;
+                    }
+
+                }
 
             }
             LayoutRebuilder.ForceRebuildLayoutImmediate(masterPanel);

@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Line", order = 1)]
 public class Line : ScriptableObject
 {
-    public enum Character{Sirio, Deneb};
+    public enum Character{Sirio, Deneb, StrangeCreature};
     public string textLine;
     public Character character;
 }

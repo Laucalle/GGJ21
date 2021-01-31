@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
+  m_Name: Choice - 2 (LB-Lose-1)
+  m_EditorClassIdentifier: 
+  textLine: Ah, that's fine I guess. You know... I feel like if I would show myself
+    without the mask I would be asking for too much from them, and that makes me
+    feel like I'm always playing a role.
+  character: 1
