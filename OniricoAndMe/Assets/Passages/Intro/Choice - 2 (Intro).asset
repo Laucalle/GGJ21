@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Choice - 2 (Intro)
   m_EditorClassIdentifier: 
-  textLine: Maybe I caused it, I feel like I'm acting my priorities, as I do with
+  textLine: Maybe it is my fault, I feel like I'm acting my priorities, as I do with
     many things.
   character: 1
+  sirio_anim: 0
+  sirio_sound: 0
+  deneb_anim: 0
+  deben_sound: 0

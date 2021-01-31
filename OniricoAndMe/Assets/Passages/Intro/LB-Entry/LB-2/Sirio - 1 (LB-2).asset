@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Sirio - 1 (LB-2)
   m_EditorClassIdentifier: 
   textLine: " Hehe, but I\u2019m having a great time with you here, far from being
-    bored! ^_^"
+    bored!"
   character: 0
+  sirio_anim: 1
+  sirio_sound: 4
+  deneb_anim: 0
+  deben_sound: 0

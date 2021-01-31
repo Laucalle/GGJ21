@@ -15,3 +15,7 @@ MonoBehaviour:
   textLine: Emm... listen, I'm having a great time here but I think I should try
     to find the exit.
   character: 1
+  sirio_anim: 0
+  sirio_sound: 0
+  deneb_anim: 2
+  deben_sound: 0

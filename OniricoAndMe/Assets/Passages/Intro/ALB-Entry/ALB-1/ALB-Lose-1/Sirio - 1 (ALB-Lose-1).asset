@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Sirio - 1 (ALB-Lose-1)
   m_EditorClassIdentifier: 
   textLine: Aha, you are not ready to talk about this yet. But that's fine, your
-    time will come and I will always be here to talk ^_^.
+    time will come and I will always be here to talk.
   character: 0
+  sirio_anim: 4
+  sirio_sound: 0
+  deneb_anim: 0
+  deben_sound: 0

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Sirio - 3 (Intro)
   m_EditorClassIdentifier: 
-  textLine: Ah, you know who I am, we have met before ^_^, you used to call me Sirio.
+  textLine: Ah, you know who I am, we have met before, you used to call me Sirio.
     I see you don't remember it just yet, but you'll find out. Just don't worry about
     it now. Actually, I'm more interested in why you are here.
   character: 2
-  sirio_anim: 2
-  sirio_sound: 4
+  sirio_anim: 1
+  sirio_sound: 1
   deneb_anim: 0
+  deben_sound: 0

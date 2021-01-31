@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textLine: I suspect that they would not see it like that, don't you think?
   character: 0
+  sirio_anim: 3
+  sirio_sound: 2
+  deneb_anim: 0
+  deben_sound: 0

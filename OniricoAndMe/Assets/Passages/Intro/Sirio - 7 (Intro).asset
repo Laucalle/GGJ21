@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Sirio - 7 (Intro)
   m_EditorClassIdentifier: 
   textLine: Because you are here, they must have followed you. But don't mind them,
-    they can't harm you while we are together ^_^.
+    they can't harm you while we are together.
   character: 0
+  sirio_anim: 0
+  sirio_sound: 0
+  deneb_anim: 0
+  deben_sound: 0

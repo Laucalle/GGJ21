@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Sirio - 1 (LB-Lose-1)
   m_EditorClassIdentifier: 
   textLine: I'd say that you have more to win than to lose, but it's OK, we don't
-    have to talk about it now ^_^.
+    have to talk about it now.
   character: 0
+  sirio_anim: 2
+  sirio_sound: 3
+  deneb_anim: 0
+  deben_sound: 0

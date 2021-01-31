@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Sirio - 1 (ALB-Win-2)
   m_EditorClassIdentifier: 
-  textLine: Oh, I'm very happy to hear that ^_^.
+  textLine: Oh, I'm very happy to hear that.
   character: 0
+  sirio_anim: 1
+  sirio_sound: 4
+  deneb_anim: 0
+  deben_sound: 0

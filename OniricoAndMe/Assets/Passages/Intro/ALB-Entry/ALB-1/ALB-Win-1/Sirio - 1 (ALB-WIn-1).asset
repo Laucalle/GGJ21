@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textLine: Ah, but you don't finding it doesn't mean it doesn't exists, maybe you
     haven't looked for it yet! Also, you're still young and you have plenty of time
-    to find your place ^_^.
+    to find your place.
   character: 0
+  sirio_anim: 2
+  sirio_sound: 1
+  deneb_anim: 0
+  deben_sound: 0

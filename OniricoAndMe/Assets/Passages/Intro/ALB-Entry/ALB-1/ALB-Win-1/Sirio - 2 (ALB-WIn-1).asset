@@ -15,3 +15,7 @@ MonoBehaviour:
   textLine: Uhm, I see. But the fact that we are here is telling us that maybe you
     are not happy in your comfort zone, don't you think?
   character: 0
+  sirio_anim: 4
+  sirio_sound: 2
+  deneb_anim: 0
+  deben_sound: 0

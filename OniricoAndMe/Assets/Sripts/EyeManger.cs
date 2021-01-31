@@ -32,7 +32,7 @@ public class EyeManger : MonoBehaviour
             {
                 an.gameObject.SetActive(false);
                 gone++;
-                if (gone < half)
+                if (gone > half)
                 {
                     break;
                 }

@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Choice - 1 (ALB-Entry)
   m_EditorClassIdentifier: 
   textLine: I don't really know, I feel like I can't be myself with the people that
-    surrounds me, you know, friends and family and stuff... but none has ever told
+    surrounds me, you know, friends and family and stuff... but no one has ever told
     me that I don't feel like... ME. So I guess It's all fine.
   character: 1
+  sirio_anim: 0
+  sirio_sound: 0
+  deneb_anim: 0
+  deben_sound: 0

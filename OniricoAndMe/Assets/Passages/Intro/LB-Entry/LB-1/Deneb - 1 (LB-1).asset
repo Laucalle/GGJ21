@@ -16,3 +16,7 @@ MonoBehaviour:
     more often or share a hobby or I don\u2019t know, talk until 3 AM! About nothing
     in particular. Just feel connected."
   character: 1
+  sirio_anim: 0
+  sirio_sound: 0
+  deneb_anim: 3
+  deben_sound: 0

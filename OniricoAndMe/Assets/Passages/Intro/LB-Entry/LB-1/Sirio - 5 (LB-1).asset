@@ -15,3 +15,7 @@ MonoBehaviour:
   textLine: "Ah, you know what? They probably are too, but you will never know if
     you don\xB4t take the risk and ask them. "
   character: 0
+  sirio_anim: 0
+  sirio_sound: 4
+  deneb_anim: 0
+  deben_sound: 0

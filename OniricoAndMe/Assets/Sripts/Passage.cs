@@ -100,7 +100,7 @@ public class Passage : MonoBehaviour
         Line current_line = nonInteractiveLines[nextDisplayed];
 
         manager.CallAnimation(current_line);
-        //manager.CallSound(current_line);
+        manager.CallSound(current_line);
 
         texto.text = current_line.textLine;
         texto.text = GetCharacterString(current_line) + texto.text;
@@ -116,7 +116,7 @@ public class Passage : MonoBehaviour
         Line current_line = exitLines[nextDisplayedExit];
 
         manager.CallAnimation(current_line);
-       // manager.CallSound(current_line);
+       manager.CallSound(current_line);
 
         texto.text = current_line.textLine;
         texto.text = GetCharacterString(current_line) + texto.text;
@@ -142,7 +142,7 @@ public class Passage : MonoBehaviour
         Line current_line = beforeChoiceLines[nextDisplayedChoiceLines];
 
         manager.CallAnimation(current_line);
-        //manager.CallSound(current_line);
+        manager.CallSound(current_line);
 
         texto.text = current_line.textLine;
         texto.text = GetCharacterString(current_line) + texto.text;

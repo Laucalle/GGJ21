@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Sirio - 4 (LB-2)
   m_EditorClassIdentifier: 
   textLine: Uhhm, you don't need to be a walking encyclopedia to be likeable, that's
-    not how people get to connect ^_^.
+    not how people get to connect.
   character: 0
+  sirio_anim: 3
+  sirio_sound: 2
+  deneb_anim: 0
+  deben_sound: 0

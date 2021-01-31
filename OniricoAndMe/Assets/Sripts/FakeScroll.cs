@@ -8,7 +8,7 @@ public class FakeScroll : MonoBehaviour
 
     private void OnTransformChildrenChanged()
     {
-        Debug.Log("A CHILD WA ADDED");
+        //Debug.Log("A CHILD WA ADDED");
         if (transform.childCount > maxChildren)
         {
             Destroy(gameObject.transform.GetChild(0).gameObject);

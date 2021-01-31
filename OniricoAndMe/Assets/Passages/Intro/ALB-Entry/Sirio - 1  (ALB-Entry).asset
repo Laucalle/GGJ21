@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Sirio - 1  (ALB-Entry)
   m_EditorClassIdentifier: 
-  textLine: Ah, you see? Now we are doing some progress ^_^. So... why do you think
-    you feel like that?
+  textLine: Ah, you see? Now we are doing some progress. So... why do you think you
+    feel like that?
   character: 0
+  sirio_anim: 2
+  sirio_sound: 4
+  deneb_anim: 0
+  deben_sound: 0

@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour
 
     public void CallSound(Line line)
     {
-
+        mainAudio.volume = 1f;
         switch (line.sirio_sound)
         {
             case Line.SirioSounds.Ah:
@@ -149,11 +149,13 @@ public class GameManager : MonoBehaviour
         switch(line.deben_sound)
         {
             case Line.DenebSounds.StepsIn:
-                mainAudio.PlayOneShot(sirio_sounds[0]);
+                mainAudio.volume = 0.1f;
+                mainAudio.PlayOneShot(deneb_sounds[0]);
                 break;
 
             case Line.DenebSounds.StepsOut:
-                mainAudio.PlayOneShot(sirio_sounds[1]);
+                mainAudio.volume = 0.1f;
+                mainAudio.PlayOneShot(deneb_sounds[1]);
                 break;
 
             default:
@@ -221,13 +223,15 @@ public class GameManager : MonoBehaviour
                     switch (points)
                     {
                         case 1:
-                            final_panel.transform.GetChild(0).GetComponent<Text>().text = "Ending 1";
+                            final_panel.transform.GetChild(0).GetComponent<Text>().text = "Deneb woke up the next day feeling their chest a bit lighter. " +
+                                "Sirio freed them for their burdens and they somehow feel they are on track to finding themself.";
                             break;
                         case 2:
-                            final_panel.transform.GetChild(0).GetComponent<Text>().text = "Ending 2";
+                            final_panel.transform.GetChild(0).GetComponent<Text>().text = "Deneb woke up with some renewed energy for the first time in what felt like forever. " +
+                                "They went on with all the confidence they thought they had lost forever.";
                             break;
                         default:
-                            final_panel.transform.GetChild(0).GetComponent<Text>().text = "Ending 3";
+                            final_panel.transform.GetChild(0).GetComponent<Text>().text = "Deneb woke up still numb, like every day. But today it felt heavier. Still lost.";
                             break;
 
                     }

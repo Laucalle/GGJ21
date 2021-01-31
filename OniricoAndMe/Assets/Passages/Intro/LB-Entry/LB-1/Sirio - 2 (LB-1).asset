@@ -16,3 +16,7 @@ MonoBehaviour:
     also not realistic to expect that for every friendship, you\u2019d be exhausted,
     don't you?"
   character: 0
+  sirio_anim: 4
+  sirio_sound: 1
+  deneb_anim: 0
+  deben_sound: 0

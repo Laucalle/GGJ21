@@ -8880,7 +8880,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 879b352df9c03a04896165c5030373e2, type: 3}
   - {fileID: 8300000, guid: dd0944c47740fa441b84d55e5d65515e, type: 3}
   mainAudio: {fileID: 0}
-  eyes: {fileID: 0}
+  eyes: {fileID: 244561975}
 --- !u!82 &1431645425
 AudioSource:
   m_ObjectHideFlags: 0

@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Choice - 1 (Intro)
   m_EditorClassIdentifier: 
-  textLine: Maybe I caused it, I feel like I had none to share the good news with.
+  textLine: Maybe it is my fault, I feel like I had no one to share the good news
+    with.
   character: 1
+  sirio_anim: 0
+  sirio_sound: 0
+  deneb_anim: 0
+  deben_sound: 0

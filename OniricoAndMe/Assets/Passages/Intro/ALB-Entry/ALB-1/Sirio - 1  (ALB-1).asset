@@ -15,3 +15,7 @@ MonoBehaviour:
   textLine: 'Onirico: I see. So the thing here may be that you''re trying to fit
     somewhere you don''t really fit in...'
   character: 0
+  sirio_anim: 3
+  sirio_sound: 2
+  deneb_anim: 0
+  deben_sound: 0

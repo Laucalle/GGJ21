@@ -15,3 +15,7 @@ MonoBehaviour:
   textLine: Ah, we can talk about anything you want really, even rocket science!
     But this is far more interesting, don't you think?
   character: 0
+  sirio_anim: 2
+  sirio_sound: 1
+  deneb_anim: 0
+  deben_sound: 0

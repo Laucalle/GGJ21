@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Sirio - 1 (LB-Win-2)
   m_EditorClassIdentifier: 
-  textLine: I'm glad you've come to that conclusion ^_^.
+  textLine: I'm glad you've come to that conclusion.
   character: 0
+  sirio_anim: 4
+  sirio_sound: 0
+  deneb_anim: 0
+  deben_sound: 0

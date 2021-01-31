@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Sirio - 2 (LB-Win-2)
   m_EditorClassIdentifier: 
-  textLine: Oh, yes. They won't annoy you any more ^_^.
+  textLine: They won't bother you for now.
   character: 0
+  sirio_anim: 1
+  sirio_sound: 1
+  deneb_anim: 0
+  deben_sound: 0

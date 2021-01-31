@@ -15,3 +15,7 @@ MonoBehaviour:
   textLine: "It\u2019s not that I have no one around, just no one I should bother
     with my stuff."
   character: 1
+  sirio_anim: 0
+  sirio_sound: 0
+  deneb_anim: 3
+  deben_sound: 0

@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textLine: Ah, I see the problem then. That must be the reason why we are here.
   character: 0
+  sirio_anim: 4
+  sirio_sound: 0
+  deneb_anim: 0
+  deben_sound: 0

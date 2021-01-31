@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Sirio - 4 (Intro)
   m_EditorClassIdentifier: 
-  textLine: I'm sure you know ^_^, take your time to think about it.
+  textLine: I'm sure you know, take your time to think about it.
   character: 0
   sirio_anim: 1
   sirio_sound: 0
   deneb_anim: 0
+  deben_sound: 0
