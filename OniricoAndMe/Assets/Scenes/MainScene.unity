@@ -402,6 +402,7 @@ MonoBehaviour:
   HoverColor: {r: 0.8113208, g: 0.32709092, b: 0, a: 1}
   PressColor: {r: 0.09900633, g: 0.6226415, b: 0, a: 1}
   DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  selectSource: {fileID: 0}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -5635,7 +5636,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 081ec80fabdaf9b47afb6c17ed59ac5a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.344
+  m_Volume: 0.136
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5830,6 +5831,7 @@ MonoBehaviour:
   HoverColor: {r: 0.8113208, g: 0.32709092, b: 0, a: 1}
   PressColor: {r: 0.09900633, g: 0.6226415, b: 0, a: 1}
   DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  selectSource: {fileID: 0}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -13384,6 +13386,7 @@ MonoBehaviour:
   HoverColor: {r: 0.8113208, g: 0.32709092, b: 0, a: 1}
   PressColor: {r: 0.09900633, g: 0.6226415, b: 0, a: 1}
   DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  selectSource: {fileID: 0}
   onClick:
     m_PersistentCalls:
       m_Calls:
