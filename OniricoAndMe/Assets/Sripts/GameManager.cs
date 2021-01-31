@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private float timer = 0;
     public float max_time = 0;
     private bool final_line_printed = false;
+    public RectTransform masterPanel;
 
     public void SelectBranch(int option)
     {
@@ -168,10 +169,7 @@ public class GameManager : MonoBehaviour
 
             if (timer == 0)
             {
-                Line aux_line = new Line();
-                aux_line.character = Line.Character.Deneb;
-                aux_line.deneb_anim = Line.DenebAnims.InOut;
-                CallAnimation(aux_line);
+                //Llamar a la animacion de Deneb Yendose.
                 timer += Time.deltaTime;
 
             } else
@@ -184,6 +182,7 @@ public class GameManager : MonoBehaviour
                 if (!final_line_printed)
                 {
                     active_passage.ShowNextNoninteractiveExitLine();
+                    LayoutRebuilder.ForceRebuildLayoutImmediate(masterPanel);
                     final_line_printed = true;
 
                 } else if (Input.anyKeyDown)
