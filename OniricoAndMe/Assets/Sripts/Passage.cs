@@ -25,6 +25,7 @@ public class Passage : MonoBehaviour
         nextDisplayedExit = 0;
         nextDisplayedChoiceLines = 0;
         exiting = false;
+        manager.active_passage = this;
         if (is_win)
         {
             manager.points++;
