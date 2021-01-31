@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Choice - 1 (ALB-Win-2)
   m_EditorClassIdentifier: 
-  textLine: 
+  textLine: Uhh, I guess so... there is that other thing, this feeling of loneliness.
   character: 0
+  sirio_anim: 0
+  sirio_sound: 0
+  deneb_anim: 0

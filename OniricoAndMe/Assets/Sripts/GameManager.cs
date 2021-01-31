@@ -14,9 +14,12 @@ public class GameManager : MonoBehaviour
     public int points;
     public GameObject final_panel, intro_panel;
     private float timer = 0;
-    public float max_time = 0;
+    public float max_time = 0, max_pitch = 1, min_pitch = 0;
     private bool final_line_printed = false;
     public RectTransform masterPanel;
+    public Animator sirio_anim, deneb_anim;
+    public List<AudioClip> sirio_sounds, deneb_sounds;
+    public AudioSource mainAudio;
 
     public void SelectBranch(int option)
     {
@@ -60,19 +63,19 @@ public class GameManager : MonoBehaviour
             switch (line.sirio_anim)
             {
                 case Line.SirioAnims.Smile:
-
+                    sirio_anim.SetTrigger("Smile");
                     break;
 
                 case Line.SirioAnims.Hand:
-
+                    sirio_anim.SetTrigger("Hand");
                     break;
 
                 case Line.SirioAnims.SmileHand:
-
+                    sirio_anim.SetTrigger("SmaileHand");
                     break;
 
                 case Line.SirioAnims.Nod:
-
+                    sirio_anim.SetTrigger("Nod");
                     break;
 
                 default:
@@ -85,19 +88,19 @@ public class GameManager : MonoBehaviour
             switch (line.deneb_anim)
             {
                 case Line.DenebAnims.InOut:
-
+                    deneb_anim.SetTrigger("WalkIn");
                     break;
 
                 case Line.DenebAnims.Happy:
-
+                    deneb_anim.SetTrigger("Up");
                     break;
 
                 case Line.DenebAnims.Sad:
-
+                    deneb_anim.SetTrigger("Down");
                     break;
 
                 case Line.DenebAnims.Surprised:
-
+                    deneb_anim.SetTrigger("Surprised");
                     break;
 
                 default:
@@ -110,22 +113,42 @@ public class GameManager : MonoBehaviour
 
     public void CallSound(Line line)
     {
+
         switch (line.sirio_sound)
         {
             case Line.SirioSounds.Ah:
-
+                mainAudio.pitch = Random.Range(min_pitch, max_pitch);
+                mainAudio.PlayOneShot(sirio_sounds[0]);
                 break;
 
             case Line.SirioSounds.Oh:
-
+                mainAudio.pitch = Random.Range(min_pitch, max_pitch);
+                mainAudio.PlayOneShot(sirio_sounds[1]);
                 break;
 
             case Line.SirioSounds.Umm:
-
+                mainAudio.pitch = Random.Range(min_pitch, max_pitch);
+                mainAudio.PlayOneShot(sirio_sounds[2]);
                 break;
 
             case Line.SirioSounds.Hehe:
+                mainAudio.pitch = Random.Range(min_pitch, max_pitch);
+                mainAudio.PlayOneShot(sirio_sounds[3]);
+                break;
 
+            default:
+                break;
+
+        }
+
+        switch(line.deben_sound)
+        {
+            case Line.DenebSounds.StepsIn:
+                mainAudio.PlayOneShot(sirio_sounds[0]);
+                break;
+
+            case Line.DenebSounds.StepsOut:
+                mainAudio.PlayOneShot(sirio_sounds[1]);
                 break;
 
             default:
@@ -140,6 +163,7 @@ public class GameManager : MonoBehaviour
         branch_visited = false;
         player_in_control = true;
         points = 0;
+        mainAudio = gameObject.GetComponent<AudioSource>();
     }
 
     public void RestartButton()
@@ -169,7 +193,7 @@ public class GameManager : MonoBehaviour
 
             if (timer == 0)
             {
-                //Llamar a la animacion de Deneb Yendose.
+                deneb_anim.SetTrigger("WalkIn");
                 timer += Time.deltaTime;
 
             } else
