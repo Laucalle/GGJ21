@@ -57,14 +57,48 @@ public class Passage : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
+    private string GetCharacterString(Line line)
+    {
+        string name;
+        switch (line.character)
+        {
+            case Line.Character.Deneb:
+
+                name =  "Deneb: ";
+                break;
+
+            case Line.Character.Sirio:
+
+                name = "Sirio: ";
+                break;
+
+            case Line.Character.StrangeCreature:
+
+                name = "Strange Creature: ";
+                break;
+
+            default:
+                name = "";
+                break;
+
+
+        }
+
+        return name;
+    }
+
     public void ShowNextNoninteractiveLine()
     {
         GameObject objeto = Instantiate(textPrefab, masterPanel);
         Text texto = objeto.GetComponent<Text>();
-        // later on animation migth be here or in the prefab itself
-        texto.text = nonInteractiveLines[nextDisplayed].textLine;
-        // TODO define proper colors
-        texto.color = nonInteractiveLines[nextDisplayed].character == Line.Character.Deneb ? Color.red : Color.cyan;
+        Line current_line = nonInteractiveLines[nextDisplayed];
+
+        manager.CallAnimation(current_line);
+        manager.CallSound(current_line);
+
+        texto.text = current_line.textLine;
+        texto.text = GetCharacterString(current_line) + texto.text;
+        texto.color = current_line.character == Line.Character.Deneb ? Color.red : Color.cyan;
         objeto.GetComponent<RectTransform>().SetAsLastSibling();
         nextDisplayed++;
     }
@@ -73,10 +107,14 @@ public class Passage : MonoBehaviour
     {
         GameObject objeto = Instantiate(textPrefab, masterPanel);
         Text texto = objeto.GetComponent<Text>();
-        // later on animation migth be here or in the prefab itself
-        texto.text = exitLines[nextDisplayedExit].textLine;
-        // TODO define proper colors
-        texto.color = exitLines[nextDisplayedExit].character == Line.Character.Deneb ? Color.red : Color.cyan;
+        Line current_line = exitLines[nextDisplayedExit];
+
+        manager.CallAnimation(current_line);
+        manager.CallSound(current_line);
+
+        texto.text = current_line.textLine;
+        texto.text = GetCharacterString(current_line) + texto.text;
+        texto.color = current_line.character == Line.Character.Deneb ? Color.red : Color.cyan;
         objeto.GetComponent<RectTransform>().SetAsLastSibling();
         nextDisplayedExit++;
 
@@ -84,16 +122,25 @@ public class Passage : MonoBehaviour
         {
             exiting = true;
         }
+
+        if (nextDisplayed >= exitLines.Count - 1)
+        {
+            manager.player_in_control = false;
+        }
     }
 
     public void ShowNextNoninteractiveChoiceLines()
     {
         GameObject objeto = Instantiate(textPrefab, masterPanel);
         Text texto = objeto.GetComponent<Text>();
-        // later on animation migth be here or in the prefab itself
-        texto.text = beforeChoiceLines[nextDisplayedChoiceLines].textLine;
-        // TODO define proper colors
-        texto.color = beforeChoiceLines[nextDisplayedChoiceLines].character == Line.Character.Deneb ? Color.red : Color.cyan;
+        Line current_line = beforeChoiceLines[nextDisplayedChoiceLines];
+
+        manager.CallAnimation(current_line);
+        manager.CallSound(current_line);
+
+        texto.text = current_line.textLine;
+        texto.text = GetCharacterString(current_line) + texto.text;
+        texto.color = current_line.character == Line.Character.Deneb ? Color.red : Color.cyan;
         objeto.GetComponent<RectTransform>().SetAsLastSibling();
         nextDisplayedChoiceLines++;
     }
@@ -101,7 +148,7 @@ public class Passage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKeyDown){
+        if (Input.anyKeyDown && manager.player_in_control){
             // instanciamos la siguiente linea de dialogo si la hay, si no la opcion.
             if (nextDisplayed < nonInteractiveLines.Count)
             {
