@@ -15,3 +15,6 @@ MonoBehaviour:
   textLine: I guess... something interesting happened to me this morning. I got a
     promotion at the bookshop where I work.
   character: 1
+  sirio_anim: 0
+  sirio_sound: 0
+  deneb_anim: 3

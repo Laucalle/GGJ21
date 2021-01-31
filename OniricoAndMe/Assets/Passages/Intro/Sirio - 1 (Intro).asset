@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textLine: Oh, hi Deneb! It's nice to see you here again, how are you?
   character: 2
+  sirio_anim: 1
+  sirio_sound: 3
+  deneb_anim: 0

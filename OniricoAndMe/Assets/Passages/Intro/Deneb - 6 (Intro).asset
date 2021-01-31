@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textLine: Woah! And why are THEY here?
   character: 1
+  sirio_anim: 0
+  sirio_sound: 0
+  deneb_anim: 4

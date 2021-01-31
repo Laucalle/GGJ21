@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textLine: I'm sure you know ^_^, take your time to think about it.
   character: 0
+  sirio_anim: 1
+  sirio_sound: 0
+  deneb_anim: 0

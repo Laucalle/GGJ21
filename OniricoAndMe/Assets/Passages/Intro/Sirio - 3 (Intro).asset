@@ -16,3 +16,6 @@ MonoBehaviour:
     I see you don't remember it just yet, but you'll find out. Just don't worry about
     it now. Actually, I'm more interested in why you are here.
   character: 2
+  sirio_anim: 2
+  sirio_sound: 4
+  deneb_anim: 0

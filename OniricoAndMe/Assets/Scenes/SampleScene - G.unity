@@ -168,6 +168,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 3f66c837638defa4abe0e95087cf12ec, type: 2}
   option_1: {fileID: 771615673}
   option_2: {fileID: 771615673}
+  is_win: 0
 --- !u!4 &7962259
 Transform:
   m_ObjectHideFlags: 0
@@ -5145,6 +5146,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 13bdd989b2379cd48936c16b030a4c7d, type: 2}
   option_1: {fileID: 878459621}
   option_2: {fileID: 539558861}
+  is_win: 1
 --- !u!4 &454441557
 Transform:
   m_ObjectHideFlags: 0
@@ -5388,6 +5390,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 52c99a7a895e73c48aae2d43db2cc540, type: 2}
   option_1: {fileID: 1458796483}
   option_2: {fileID: 1458796483}
+  is_win: 0
 --- !u!4 &539558862
 Transform:
   m_ObjectHideFlags: 0
@@ -5955,6 +5958,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 884ed17191993f84ab44d8aefe197761, type: 2}
   option_1: {fileID: 1839869945}
   option_2: {fileID: 1839869945}
+  is_win: 0
 --- !u!4 &771615674
 Transform:
   m_ObjectHideFlags: 0
@@ -6175,6 +6179,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: b03d72937048a2349947a27c7e4668a6, type: 2}
   option_1: {fileID: 1458796483}
   option_2: {fileID: 1458796483}
+  is_win: 1
 --- !u!4 &878459622
 Transform:
   m_ObjectHideFlags: 0
@@ -6529,6 +6534,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 9857a2abf9b85494e84572e8710d751b, type: 2}
   option_1: {fileID: 771615673}
   option_2: {fileID: 771615673}
+  is_win: 0
 --- !u!4 &972168318
 Transform:
   m_ObjectHideFlags: 0
@@ -6594,6 +6600,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 29b288bcaf4ee2d469b69fe5b20a65fb, type: 2}
   option_1: {fileID: 972168317}
   option_2: {fileID: 2083076537}
+  is_win: 0
 --- !u!4 &1101042301
 Transform:
   m_ObjectHideFlags: 0
@@ -6659,6 +6666,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 7adebf7b13f5fce4e9b91f5d26b16a14, type: 2}
   option_1: {fileID: 7962258}
   option_2: {fileID: 2114981665}
+  is_win: 0
 --- !u!4 &1177727371
 Transform:
   m_ObjectHideFlags: 0
@@ -6917,6 +6925,7 @@ MonoBehaviour:
   boton2: {fileID: 0}
   option_color: {r: 0.9245283, g: 0.6599809, b: 0.10902455, a: 1}
   branch_visited: 0
+  points: 0
 --- !u!1 &1451582949
 GameObject:
   m_ObjectHideFlags: 0
@@ -7045,6 +7054,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 848fe43e5dc02f14d8ed77ccb42d9744, type: 2}
   option_1: {fileID: 1101042300}
   option_2: {fileID: 1177727370}
+  is_win: 0
 --- !u!4 &1458796484
 Transform:
   m_ObjectHideFlags: 0
@@ -7106,6 +7116,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 6b925b9cd7c235e40995b44294864e83, type: 2}
   option_1: {fileID: 1458796483}
   option_2: {fileID: 1458796483}
+  is_win: 0
 --- !u!4 &1475792961
 Transform:
   m_ObjectHideFlags: 0
@@ -7437,6 +7448,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 9b72800dac8d7ed4ab8edd5a40263984, type: 2}
   option_1: {fileID: 1458796483}
   option_2: {fileID: 771615673}
+  is_win: 0
 --- !u!1 &1624829234
 GameObject:
   m_ObjectHideFlags: 0
@@ -12368,6 +12380,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 109da33809227d24eb1de0c296e332c4, type: 2}
   option_1: {fileID: 1475792960}
   option_2: {fileID: 454441556}
+  is_win: 0
 --- !u!1 &2072447922
 GameObject:
   m_ObjectHideFlags: 0
@@ -12449,6 +12462,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 454ca61770d801044bca1b451f9f594d, type: 2}
   option_1: {fileID: 771615673}
   option_2: {fileID: 771615673}
+  is_win: 1
 --- !u!4 &2083076538
 Transform:
   m_ObjectHideFlags: 0
@@ -12510,6 +12524,7 @@ MonoBehaviour:
   line_to_P2: {fileID: 11400000, guid: 766af33e46a6924489edd722eee9d98b, type: 2}
   option_1: {fileID: 771615673}
   option_2: {fileID: 771615673}
+  is_win: 1
 --- !u!4 &2114981666
 Transform:
   m_ObjectHideFlags: 0
