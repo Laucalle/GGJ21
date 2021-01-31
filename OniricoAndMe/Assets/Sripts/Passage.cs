@@ -17,9 +17,14 @@ public class Passage : MonoBehaviour
     public bool is_win = false;
     private GameObject button1, button2;
     private bool options_instantiated, exiting;
+
+    private Color color_Deneb, color_Sirio, color_unselected;  
     // Start is called before the first frame update
     void OnEnable()
     {
+        ColorUtility.TryParseHtmlString("#FFBD69", out  color_Deneb );
+        ColorUtility.TryParseHtmlString("#ABC7E4", out  color_Sirio );
+        ColorUtility.TryParseHtmlString("#8F7F69", out  color_unselected );
         options_instantiated = false;
         nextDisplayed = 0;
         nextDisplayedExit = 0;
@@ -99,7 +104,7 @@ public class Passage : MonoBehaviour
 
         texto.text = current_line.textLine;
         texto.text = GetCharacterString(current_line) + texto.text;
-        texto.color = current_line.character == Line.Character.Deneb ? Color.red : Color.cyan;
+        texto.color = current_line.character == Line.Character.Deneb ? color_Deneb : color_Sirio;
         objeto.GetComponent<RectTransform>().SetAsLastSibling();
         nextDisplayed++;
     }
@@ -115,7 +120,7 @@ public class Passage : MonoBehaviour
 
         texto.text = current_line.textLine;
         texto.text = GetCharacterString(current_line) + texto.text;
-        texto.color = current_line.character == Line.Character.Deneb ? Color.red : Color.cyan;
+        texto.color = current_line.character == Line.Character.Deneb ? color_Deneb : color_Sirio;
         objeto.GetComponent<RectTransform>().SetAsLastSibling();
         nextDisplayedExit++;
 
@@ -141,7 +146,7 @@ public class Passage : MonoBehaviour
 
         texto.text = current_line.textLine;
         texto.text = GetCharacterString(current_line) + texto.text;
-        texto.color = current_line.character == Line.Character.Deneb ? Color.red : Color.cyan;
+        texto.color = current_line.character == Line.Character.Deneb ? color_Deneb : color_Sirio;
         objeto.GetComponent<RectTransform>().SetAsLastSibling();
         nextDisplayedChoiceLines++;
     }
@@ -172,14 +177,14 @@ public class Passage : MonoBehaviour
                     button1 = Instantiate(bottonPrefab, masterPanel);
                     Text texto_P1 = button1.GetComponent<Text>();
                     texto_P1.text = "Deneb: " + line_to_P1.textLine;
-                    texto_P1.color = Color.red;
+                    texto_P1.color = color_unselected;
                     button1.GetComponent<RectTransform>().SetAsLastSibling();
                     button1.GetComponent<TextButton>().onClick.AddListener(GotoOpt1);
 
                     button2 = Instantiate(bottonPrefab, masterPanel);
                     Text texto_P2 = button2.GetComponent<Text>();
                     texto_P2.text = "Deneb: " + line_to_P2.textLine;
-                    texto_P2.color = Color.red;
+                    texto_P2.color = color_unselected;
                     button2.GetComponent<RectTransform>().SetAsLastSibling();
                     button2.GetComponent<TextButton>().onClick.AddListener(GotoOpt2);
 

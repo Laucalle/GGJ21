@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.7430043, b: 0.41037738, a: 1}
+  m_Color: {r: 0.6313726, g: 0.6313726, b: 0.6313726, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -107,10 +107,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c8186ebf4749e4598d8167ee71c4d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NormalColor: {r: 0.7264151, g: 0, b: 0, a: 1}
-  HoverColor: {r: 0.8113208, g: 0.32709092, b: 0, a: 1}
-  PressColor: {r: 0.09900633, g: 0.6226415, b: 0, a: 1}
-  DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  NormalColor: {r: 0.56, g: 0.49633685, b: 0.4088, a: 1}
+  HoverColor: {r: 1, g: 0.6537201, b: 0.21300006, a: 1}
+  PressColor: {r: 1, g: 0.68706024, b: 0.29800004, a: 1}
+  DisabledColor: {r: 1, g: 0.7411765, b: 0.41176474, a: 1}
   selectSource: {fileID: 0}
   onClick:
     m_PersistentCalls:
