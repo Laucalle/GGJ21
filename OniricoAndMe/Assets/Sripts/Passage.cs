@@ -155,7 +155,7 @@ public class Passage : MonoBehaviour
             {
                 ShowNextNoninteractiveLine();
             }
-            else if (exitLines.Count > 0 && manager.branch_visited && nextDisplayedExit < exitLines.Count)
+            else if (exitLines.Count > 0 && manager.branch_visited && nextDisplayedExit < exitLines.Count && !options_instantiated)
             {
                 ShowNextNoninteractiveExitLine();
             }
