@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
-  m_Name: Choice - 1
+  m_Name: Choice - 1 (LB-Lose-2)
   m_EditorClassIdentifier: 
-  textLine: 
+  textLine: Ah, I'm glad to hear that. Anyway, listen Sirio, there is this other
+    thing I would like to talk about, this constant feeling that I'm playing out
+    a part.
   character: 1

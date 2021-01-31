@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
-  m_Name: Choice - 1
+  m_Name: Choice - 2 (LB-Lose-2)
   m_EditorClassIdentifier: 
-  textLine: 
+  textLine: Ah, I'm glad to hear that. You probably wouldn't if you knew me, but
+    I'm faking to be interesting most of the time, along with everything else.
   character: 1

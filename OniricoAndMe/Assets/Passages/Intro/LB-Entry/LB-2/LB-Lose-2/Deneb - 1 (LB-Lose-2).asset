@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
-  m_Name: Deneb - 1
+  m_Name: Deneb - 1 (LB-Lose-2)
   m_EditorClassIdentifier: 
-  textLine: 
+  textLine: Emm... listen, I'm having a great time here but I think I should try
+    to find the exit.
   character: 1
