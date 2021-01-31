@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
-  m_Name: Sirio - 2 (ALB-Lose-1)
+  m_Name: Sirio - 4 (LB-Win-1)
   m_EditorClassIdentifier: 
-  textLine: Sure! Just keep walking and you'll eventually find it.
+  textLine: I hope those beasts leave them some rest...
   character: 0
-  sirio_anim: 0
-  sirio_sound: 0
+  sirio_anim: 3
+  sirio_sound: 1
   deneb_anim: 0
   deben_sound: 0

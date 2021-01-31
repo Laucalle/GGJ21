@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Sirio - 1  (ALB-1)
   m_EditorClassIdentifier: 
-  textLine: 'Onirico: I see. So the thing here may be that you''re trying to fit
-    somewhere you don''t really fit in...'
+  textLine: I see. So the thing here may be that you're trying to fit somewhere you
+    don't really fit in...
   character: 0
   sirio_anim: 3
   sirio_sound: 2

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Deneb - 1 (ALB-Win-2)
   m_EditorClassIdentifier: 
-  textLine: Yeah, me too! Hey, look! Some of them are gone now.
+  textLine: Hey, look! Some of the creepy monsters are gone now.
   character: 1
   sirio_anim: 0
   sirio_sound: 0

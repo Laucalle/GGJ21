@@ -15,6 +15,6 @@ MonoBehaviour:
   textLine: Oh, hi Deneb! It's nice to see you here again, how are you?
   character: 2
   sirio_anim: 1
-  sirio_sound: 1
+  sirio_sound: 0
   deneb_anim: 0
   deben_sound: 0

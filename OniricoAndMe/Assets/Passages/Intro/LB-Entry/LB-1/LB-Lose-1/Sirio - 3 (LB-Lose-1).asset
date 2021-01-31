@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Sirio - 3 (LB-Lose-1)
   m_EditorClassIdentifier: 
-  textLine: Hey! Don't be rude!
+  textLine: I hope those beasts leave them some rest...
   character: 0
   sirio_anim: 3
   sirio_sound: 0

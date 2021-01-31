@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Deneb - 2 (LB-Win-1)
   m_EditorClassIdentifier: 
-  textLine: Ah, I'm glad to hear that. Emm... listen, I'm having a great time here
-    but I think I should try to find the exit.
+  textLine: Ah, good to know. Emm... listen, I'm having a great time here but I think
+    I should try to find the exit.
   character: 1
   sirio_anim: 0
   sirio_sound: 0

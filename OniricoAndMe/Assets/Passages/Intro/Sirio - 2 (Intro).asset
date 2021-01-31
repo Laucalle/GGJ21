@@ -16,6 +16,6 @@ MonoBehaviour:
     I made this campfire for both of us so we can have a talk if you want.
   character: 2
   sirio_anim: 2
-  sirio_sound: 1
+  sirio_sound: 0
   deneb_anim: 0
   deben_sound: 0

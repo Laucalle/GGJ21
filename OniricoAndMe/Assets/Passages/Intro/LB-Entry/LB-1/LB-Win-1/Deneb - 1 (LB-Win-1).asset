@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffd92823e2c853469233fd897367b30, type: 3}
   m_Name: Deneb - 1 (LB-Win-1)
   m_EditorClassIdentifier: 
-  textLine: Hey, look! There are less of them now.
+  textLine: Hey, look! There are less of those ugly creatures now.
   character: 1
   sirio_anim: 0
   sirio_sound: 0
