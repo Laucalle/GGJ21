@@ -124,7 +124,7 @@ public class Passage : MonoBehaviour
             exiting = true;
         }
 
-        if (nextDisplayed >= exitLines.Count - 1)
+        if (nextDisplayedExit >= exitLines.Count - 1)
         {
             manager.player_in_control = false;
         }
@@ -171,14 +171,14 @@ public class Passage : MonoBehaviour
                     options_instantiated = true;
                     button1 = Instantiate(bottonPrefab, masterPanel);
                     Text texto_P1 = button1.GetComponent<Text>();
-                    texto_P1.text = line_to_P1.textLine;
+                    texto_P1.text = "Deneb: " + line_to_P1.textLine;
                     texto_P1.color = Color.red;
                     button1.GetComponent<RectTransform>().SetAsLastSibling();
                     button1.GetComponent<TextButton>().onClick.AddListener(GotoOpt1);
 
                     button2 = Instantiate(bottonPrefab, masterPanel);
                     Text texto_P2 = button2.GetComponent<Text>();
-                    texto_P2.text = line_to_P2.textLine;
+                    texto_P2.text = "Deneb: " + line_to_P2.textLine;
                     texto_P2.color = Color.red;
                     button2.GetComponent<RectTransform>().SetAsLastSibling();
                     button2.GetComponent<TextButton>().onClick.AddListener(GotoOpt2);
